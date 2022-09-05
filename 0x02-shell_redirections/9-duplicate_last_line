@@ -1,2 +1,2 @@
 #!/bin/bash
-tails -1 $(cp)
+tails -1 iacta >> iacta
