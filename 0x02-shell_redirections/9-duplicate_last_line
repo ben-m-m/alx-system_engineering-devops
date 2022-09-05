@@ -1,0 +1,2 @@
+#!/bin/bash
+tails -1 $(cp)
