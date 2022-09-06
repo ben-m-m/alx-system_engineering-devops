@@ -1,2 +1,2 @@
 #!/bin/bash
-PATH=$(find . -type d -mindepth | wc -l)
+PATH=$(PATH:find . -type d -mindepth | wc -l)
