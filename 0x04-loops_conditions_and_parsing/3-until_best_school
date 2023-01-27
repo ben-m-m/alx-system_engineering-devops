@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #displays Best School 10 times using until only
-index i=0
-until ((i=10))
+index=0
+until [ $index -eq 10 ]
 do
 	echo "Best School"
-	((i++))
+	((index++))
 done
