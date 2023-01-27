@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #displays number and text in select index
 count=1
+
 while [ $count -le 20 ]
 do
 	echo "$count"
