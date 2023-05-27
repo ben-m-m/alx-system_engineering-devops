@@ -1,0 +1,26 @@
+﻿Specifics about this infrastructure
+
+For every additional element, why you are adding it
+The additional servers allow for improved scalability, performance and load distribution
+The load balancer allows for the distribution of requests and responses from the servers improving on response time and handling.
+
+What distribution algorithm your load balancer is configured with and how it works
+The load balancer is configured with a round-robin kind of algorithm which evenly distributes requests in a sequential manner to each server in rotation.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+Active-Active setup is where both servers handle requests simultaneously as is in the set up while Active-Passive setup is where one serve handles requests while the other remains idle and only comes active if the first one fails
+
+How a database Primary-Replica (Master-Slave) cluster works
+It consists of a primary node (Master) and a replica node (Slave). The Master handles read and write operations while the Slave replicates the data from the Master. This provides backup and data redundancy.
+
+What is the difference between the Primary node and the Replica node in regard to the application
+The primary node is responsible for handling write operations and maintaining the most upto date data while the replica node replicates the data from primary and can handle read operations to offload the primary node.
+
+Issues with this infrastructure
+
+Where are Single Point of Failure (SPOF):
+If the load balancer fails, the entire website may be inaccessible and if one of the servers fails the load-balancer will redirect traffic to the other which may result in slower response times.
+Security issues (no firewall, no HTTPS)
+The design lacks a firewall which exposes it to unwanted traffic. There is also no SSL (Secure Socket Layer) hence traffic is not encrypted.
+No monitoring
+There is no monitoring hence one cannot find out if the servers are being overloaded or get data about the running sofwares.
