@@ -1,0 +1,26 @@
+﻿explain some specifics about this infrastructure
+
+What is a server
+It is a computer or system that provides resources to other computers or clients.
+
+What is the role of the domain name
+It serves as a human readable identifier for a website
+
+What type of DNS record www is in www.foobar.com
+It is CNAME(Canonical Name) record
+
+What is the role of the web server
+It handles incoming HTTP requests from clients and delivers web pages (static) or other resources in response.
+What is the role of the application server
+It is responsible for executing the website's code and generating dynamic content. It also processes requests from the web server and interacts with the database if need be. 
+What is the role of the database
+It manages and stores structured data used by the website.
+What is the server using to communicate with the computer of the user requesting the website
+It uses the internet through which it receives an HTTP request directed to its IP address.
+explain what the issues are with this infrastructure
+S.P.O.F(Single Point of Failure)
+There being only one server, any hardware or software failure could cause the entire website to become inaccessible.
+Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+During maintenance periods the website like deploying new code or restarting the server, the website may experience downtime which means users cannot access it.
+Cannot scale if too much incoming traffic
+The infrastructure cannot handle a large amount of incoming traffic and the resources may be overwhelmed leading to performance issues or even complete outage.
