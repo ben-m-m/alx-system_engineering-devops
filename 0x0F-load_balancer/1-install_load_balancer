@@ -11,7 +11,7 @@ frontend benson-frontend
         mode http
         default_backend benson-backend
 
-backend samson-backend
+backend benson-backend
         balance roundrobin
         server 47795-web-01 100.26.235.124:80 check
         server 47795-web-02 100.26.53.77:80 check
