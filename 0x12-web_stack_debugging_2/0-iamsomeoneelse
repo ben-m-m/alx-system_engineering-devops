@@ -2,8 +2,8 @@
 #user also has the ability to perform tasks that the root user can do
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <username>"
+	sudo whoami
 	exit 1
 fi
 
-su - "$1" -c "whoami"
+su -u "$1" whoami
